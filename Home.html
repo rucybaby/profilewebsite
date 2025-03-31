@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 1 - Hanni Liao Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+    <div class="splash" id="splash">
+        <div class="splash-banner">Hanni LIAO PROFILE</div>
+    </div>
+
+  <header>
+    <div class="logo">Hanni LIAO</div>
+    <nav>
+        <ul>
+          <li><a href="Home.html" class="active">Home</a></li>
+          <li><a href="Resume.html">Resume</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="bg-shape"></div>
+
+    <div class="content-wrapper">
+      <div class="photo-container" id="photoContainer">
+        <img 
+          src="images/headshot.jpg" 
+          alt="Hanni Rucy" 
+          class="profile-photo" 
+          id="profilePhoto"
+        >
+      </div>
+
+      <div class="info-card" id="infoCard">
+        <h2 class="name">Hanni LIAO</h2>
+        <h3 class="title">RUCY</h3>
+      </div>
+
+      <div class="intro" id="introText">
+        <h1>Who am I</h1>
+        <h2>I am Hanni LIAO</h2>
+        <p>
+            A Digital Media Enthusiast.<br>
+            A Cultural Researcher.<br>
+            And a Visual Communicator.
+        </p>
+        <div class="btn-group">
+          <a href="Resume.html" class="btn">Resume</a>
+          <a href=projects.html" class="btn">Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Hanni Rucy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+  
+      document.querySelector('.bg-shape').classList.add('show-img');
+  
+      document.getElementById('infoCard').classList.add('slide-in');
+      document.getElementById('introText').classList.add('slide-in');
+
+      const infoCard = document.getElementById('infoCard');
+      const photoContainer = document.getElementById('photoContainer');
+
+      infoCard.insertBefore(photoContainer, infoCard.firstChild);
+
+      photoContainer.style.position = 'relative';
+      photoContainer.style.top = 'auto';
+      photoContainer.style.left = 'auto';
+      photoContainer.style.transform = 'none';
+
+      photoContainer.style.margin = '0 auto 1rem auto';
+
+      photoContainer.style.width = '120px';
+      photoContainer.style.height = '120px';
+    }, 3000);
+  </script>
+</body>
+</html>

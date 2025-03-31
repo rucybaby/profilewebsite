@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: #f05a24;
+}
+
+.resume-hero {
+  position: relative;
+  min-height: calc(100vh - 60px); 
+  background: url("images/background.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.resume-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: url("images/background.jpeg") center/cover no-repeat;
+  opacity: 0.5;
+}
+
+.resume-content {
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.intro-block {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.intro-block p {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.resume-block {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.resume-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.resume-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.resume-card .card-time {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+.resume-card .card-position {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+.resume-card .card-company {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+.resume-card .card-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+.resume-card .card-desc {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.row-layout {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.card-left {
+  flex: 0 0 300px;
+}
+.card-right {
+  flex: 1;
+}
+.card-right p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.skill-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+.skill-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f05a24;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .resume-hero {
+    min-height: calc(100vh - 50px);
+  }
+  .resume-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .row-layout {
+    flex-direction: column;
+  }
+  .skill-list {
+    grid-template-columns: 1fr;
+  }
+}

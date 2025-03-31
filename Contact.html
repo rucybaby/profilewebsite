@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Hanni Liao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 通用样式重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    /* 头部导航 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #f05a24;
+    }
+    /* Contact 页面主体 */
+    .contact-section {
+      position: relative;
+      background: url("images/background.jpeg") center/cover no-repeat;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    /* 白色蒙版，透明度50% */
+    .contact-section .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: 1;
+    }
+    /* 内容区域，确保显示在蒙版之上 */
+    .contact-section .contact-content {
+      position: relative;
+      z-index: 2;
+      color: #333;
+      padding: 1rem;
+    }
+    .contact-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .contact-section p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .contact-section a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Hanni Liao</div>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact 页面主体部分 -->
+  <section class="contact-section">
+    <div class="overlay"></div>
+    <div class="contact-content">
+      <h1>Contact Me</h1>
+      <p>If you have any questions, feel free to email me at <a href="honeyrucy@gmail.com"></a>.</p>
+      <p>Or call me at: +852 59563727</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Hanni Liao. All rights reserved.</p>
+  </footer>
+</body>
+</html>
